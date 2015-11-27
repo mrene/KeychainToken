@@ -26,6 +26,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+#include <Carbon/Carbon.h>
+
 #include "mypkcs11.h"
 
 

@@ -55,7 +55,7 @@ int main(int argc, char *argv[]) {
 
 
     int i;
-    if(argc != 1) {
+    if(argc != 2) {
         fprintf(stderr, "Usage: %s <pkcs11_library>\n",argv[0]);
         return(1);
     } else {
