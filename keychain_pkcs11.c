@@ -1848,8 +1848,8 @@ sign(CK_SESSION_HANDLE hSession, CK_BYTE_PTR pData, CK_ULONG ulDataLen, CK_BYTE_
 		*pulSignatureLen = output.Length;
     }
 
-    CSSM_DeleteContext(session->signContext);
-    session->signContext = 0;
+    // CSSM_DeleteContext(session->signContext);
+    // session->signContext = 0;
 
 
     return ret;

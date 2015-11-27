@@ -1,5 +1,5 @@
 CC=clang
-CFLAGS=-ggdb3 -Wall -Wno-deprecated-declarations
+CFLAGS=-ggdb3 -Wall -Wno-deprecated-declarations -DDEBUG_LEVEL=5 -DDEBUG
 LDFLAGS=-framework CoreFoundation -framework Security -framework Carbon -lcrypto
 OBJECTS=./debug.o \
 	./keychain_pkcs11.o \
@@ -20,3 +20,7 @@ keychain_pkcs11.dylib: $(OBJECTS)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c -o $@ $<
+
+
+clean:
+	rm -f *.o keychain_pkcs11.dylib dump_info pkcs11_test
